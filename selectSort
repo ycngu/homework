@@ -1,0 +1,15 @@
+i <- 0
+while i < a['length']
+    min<- i
+    j <- i + 1
+    while j < a['length']
+        if a[min] > a[j]
+            min <- j
+        end
+    j <- j + 1
+    end
+    t <- a[i]
+    a[i] <-a[min]
+    a[min] <- t
+    i <- i + 1
+end
