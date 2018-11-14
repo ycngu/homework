@@ -1,0 +1,25 @@
+.window {
+    width: 800px;
+    overflow: hidden;
+    border: 1px red solid;
+}
+
+.images {
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.5s;
+}
+
+.position-1{
+    transform: translateX(0)
+}
+.position-2{
+    transform: translateX(-800px)
+}
+.position-3{
+    transform: translateX(-1600px)
+}
+
+.blue{
+    color:blue;
+}
