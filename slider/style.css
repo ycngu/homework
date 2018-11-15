@@ -1,8 +1,17 @@
 .images {
     display: flex;
     align-items: flex-start;
+    transition: all 0.7s;
 }
 
+.wrapper{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -320px;
+    text-align: center;
+}
 .window{
     width:800px;
     overflow: hidden;
