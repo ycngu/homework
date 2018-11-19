@@ -1,3 +1,5 @@
+var n = 0
+
 init()
 
 setInterval(() => {
