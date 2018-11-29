@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击别处取消浮层</title>
+</head>
+<style>
+    .wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .pop {
+        border: 1px rgb(109, 105, 105) solid;
+        position: absolute;
+        white-space: nowrap;
+        top: 5px;
+        left: 100%;
+        padding: 10px;
+        margin-left: 10px;
+        background-color: white;
+        display: none;
+    }
+
+    .pop::before {
+        position: absolute;
+        right: 100%;
+        top: 5px;
+        border: 10px transparent solid;
+        border-right-color: rgb(109, 105, 105);
+        content: '';
+    }
+
+    .pop::after {
+        position: absolute;
+        right: 100%;
+        top: 5px;
+        border: 10px transparent solid;
+        border-right-color: white;
+        margin-right: -1px;
+        content: '';
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="pop">浮层</div>
+        <button class="popButton">按钮</button>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script>
+    $('.popButton').on('click', function () {
+        $('.pop').show()
+        $(document).one('click', function () {
+            $('.pop').hide()
+        })
+    })
+
+    $('.wrapper').on('click', false)
+</script>
+
+</html>
