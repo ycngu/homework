@@ -53,14 +53,16 @@
 </body>
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script>
-    $('.popButton').on('click', function () {
-        $('.pop').show()
+    $('.popButton').on('click',function(){
+        $('.pop').toggle()
         $(document).one('click', function () {
-            $('.pop').hide()
-        })
+           $('.pop').hide()
+       })
     })
 
-    $('.wrapper').on('click', false)
+    $('.wrapper').on('click', false) //阻止冒泡，否则 $(document).one('click', function () {
+                                                            //        $('.pop').hide()
+                                                            //    }) 会执行
 </script>
 
 </html>
