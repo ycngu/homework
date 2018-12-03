@@ -117,4 +117,8 @@ window.jQuery = function (nodeOrSeletor) {
 }
 
 
+jQuery.ajax = function(object){
+
+}
+
 window.$ = jQuery
